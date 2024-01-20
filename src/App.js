@@ -5,7 +5,6 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import Lottie from 'react-lottie';
 import * as defaultAnimationData from './resources/girl-normal.json';
-import { makeStyles } from '@mui/styles';
 import {styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import { spacing } from '@mui/system';
@@ -18,15 +17,6 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-}));
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: spacing(1),
-      width: '25ch',
-    },
-  },
 }));
 
 const defaultOptions = {
@@ -116,7 +106,7 @@ function App() {
     }
   }
 
-  const classes = useStyles();
+
   return (
     <div className='App' style={{
       position: 'fixed',
@@ -127,7 +117,6 @@ function App() {
       <Container fixed style={styles.ContactBar}>
         <p>Sulogna Mobile</p>
       </Container>
-      <form className={classes.root} noValidate autoComplete="off">
       <div style={{
         width: '100%'
       }}>
@@ -142,7 +131,6 @@ function App() {
         backgroundColor: Colors.COLOR4,
         width: 'auto',
       }}><img width="50" height="50" src="https://img.icons8.com/ios/50/smiling.png" alt="smiling"/></Item></ButtonBase>
-      </form>
     </div>
   );
 }
