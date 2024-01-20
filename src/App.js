@@ -51,7 +51,7 @@ const avatarFiles = {
   1: {
     path: './resources/girl-laughing-raw.json',
     emotion: 'laugh',
-    duration: 2500
+    duration: 1800
   }
 }
 
